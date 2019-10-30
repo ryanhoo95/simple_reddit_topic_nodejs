@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,14 @@
   "bugs": {
     "url": "https://github.com/ryanhoo95/simple_reddit_topic_nodejs/issues"
   },
-  "homepage": "https://github.com/ryanhoo95/simple_reddit_topic_nodejs#readme"
+  "homepage": "https://github.com/ryanhoo95/simple_reddit_topic_nodejs#readme",
+  "dependencies": {
+    "mongoose": "^5.7.7",
+    "mongoose-timestamp": "^0.6.0",
+    "restify": "^8.4.0",
+    "restify-errors": "^8.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
 }
