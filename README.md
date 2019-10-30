@@ -1,1 +1,3 @@
-# simple_reddit_topic_nodejs
+# Simple Reddit Topic Backend
+
+Using Nodejs, Restify and Mongoose
