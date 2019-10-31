@@ -37,7 +37,7 @@ module.exports = server => {
 
         try {
             const newTopic = await topicData.save();
-            res.send(newTopic._id);
+            res.send(newTopic);
             next();
         } catch (err) {
             return next(new errors.InternalError(err.message))
