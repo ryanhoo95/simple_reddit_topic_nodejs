@@ -5,7 +5,7 @@ module.exports = server => {
     // get topics
     server.get('/topics', async (req, res, next) => {
         try {
-            const topics = await Topic.find().limit(20).sort({upvote: -1});
+            const topics = await Topic.find().limit(20).sort({upvote: -1, updatedAt: -1});
             res.send(topics);
             next();
         } catch (err) {
