@@ -5,7 +5,7 @@ module.exports = server => {
     // get topics
     server.get('/topics', async (req, res, next) => {
         try {
-            const topics = await Topic.find().limit(20).sort({upvote: -1, updatedAt: -1});
+            const topics = await Topic.find().sort({upvote: -1, updatedAt: -1}).limit(20);
             res.send(topics);
             next();
         } catch (err) {
@@ -16,7 +16,7 @@ module.exports = server => {
     // get topics based on device id
     server.get('/topics/:deviceId', async (req, res, next) => {
         try {
-            const topics = await Topic.find({deviceId: req.params.deviceId}).limit(20).sort({upvote: -1});
+            const topics = await Topic.find({deviceId: req.params.deviceId}).sort({upvote: -1}).limit(20);
             res.send(topics);
             next();
         } catch (err) {
