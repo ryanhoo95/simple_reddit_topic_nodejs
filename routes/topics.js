@@ -8,6 +8,7 @@ module.exports = server => {
             const topics = await Topic.find().sort({upvote: -1, updatedAt: -1}).limit(20);
             res.send(topics);
             next();
+            
         } catch (err) {
             return next(new errors.InvalidContentError(err));
         }
